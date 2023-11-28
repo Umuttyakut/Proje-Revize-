@@ -1,0 +1,31 @@
+﻿@using Proje_Revize_.Models
+@model List<Birim>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+    
+}
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Birim Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+    <tr>
+        <td>@k.BirimID</td>
+        <td>@k.BirimAd</td>
+        <td><a href="/Default/birimSil/@k.BirimID" class="btn btn-danger">Sil</a></td>
+        <td><a href="/Default/birimGetir/@k.BirimID" class="btn btn-success">Güncelle</a></td>
+        <td><a href="#" class="btn btn-info">Detaylar</a></td>
+    </tr>
+    }
+</table>
+<a href="/Default/YeniBirim/" class="btn btn-primary">Yeni Departman Ekle</a>
+

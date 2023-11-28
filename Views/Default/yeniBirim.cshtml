@@ -1,0 +1,12 @@
+﻿@model Proje_Revize_.Models.Birim;
+@{
+    ViewData["Title"] = "yeniBirim";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<br />
+<form class="form-group" method="post">
+    <b>Birim Adı</b>
+    @Html.TextBoxFor(x=>x.BirimAd,new {@class="form-control"});
+    <button class="btn btn-primary">Ekle</button>
+</form>
+
