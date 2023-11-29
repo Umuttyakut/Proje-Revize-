@@ -43,6 +43,11 @@ namespace Proje_Revize_.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult birimDetay(int id)
+        {
+            var per=c.Personels.Where(x=>x.BirimID==id).ToList();
+            return View(per);
+        }
 
     }
 }

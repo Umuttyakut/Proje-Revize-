@@ -10,7 +10,7 @@ namespace Proje_Revize_.Models
         public string Soyad { get; set; }
         public string Sehir { get; set; }
 
-        public int BirimId { get; set; }
+        public int BirimID { get; set; }
         public Birim Birim { get; set; }
     }
 }

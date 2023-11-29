@@ -7,6 +7,6 @@ namespace Proje_Revize_.Models
         [Key]
         public int BirimID { get; set; }
         public string BirimAd { get; set;}
-        public IList<Personel> Personels { get;}
+        public IList<Personel> Personels { get; set; }
     }
 }

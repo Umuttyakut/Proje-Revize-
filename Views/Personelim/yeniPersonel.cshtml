@@ -1,0 +1,19 @@
+﻿@model Proje_Revize_.Models.Personel
+@{
+    ViewData["Title"] = "yeniPersonel";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<br />
+<form class="form-group" method="post">
+    <b>Adı</b>
+    @Html.TextBoxFor(x=>x.Ad,new {@class="form-control"})
+    <b>Soyadı</b>
+    @Html.TextBoxFor(x=>x.Soyad,new {@class="form-control"})
+    <b>Şehir</b>
+    @Html.TextBoxFor(x=>x.Sehir,new {@class="form-control"})
+    <b>Personel Adı</b>
+    @Html.DropDownListFor(x=>x.Birim.BirimID,(List<SelectListItem>)ViewBag.dgr,new {@class="form-control"})
+    <button class="btn btn-primary">Ekle</button>
+</form>
+
+
